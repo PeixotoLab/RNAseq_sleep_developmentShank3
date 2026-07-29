@@ -1,1 +1,1 @@
-# This section contains files for differential expression analysis
+# This section contains scripts for differential expression analysis
