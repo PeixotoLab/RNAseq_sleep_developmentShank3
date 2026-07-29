@@ -1,1 +1,1 @@
-# This section contains files for functional enrichment analysis
+# This section contains scripts for functional enrichment analysis
