@@ -1,0 +1,12 @@
+[
+  {
+    "index": "gencode.vM37-salmon-index-v1.0.0-mouse-withdecoys",
+    "source": "GENCODE",
+    "organism": "Mus musculus",
+    "release": "M37",
+    "genome": "GRCm39",
+    "fasta": ["/Users/elliotwald/Documents/mouse_dev_S3_WT_bulk/data/IndexFiles/gencode.vM37.transcripts.fa.gz"],
+    "gtf": "/Users/elliotwald/Documents/mouse_dev_S3_WT_bulk/data/IndexFiles/gencode.vM37.annotation.gtf.gz",
+    "sha256": "2d7b492a1ba9a0bd251d96850c7b3510bd5950518170668a9489c306bf1ac616"
+  }
+]
