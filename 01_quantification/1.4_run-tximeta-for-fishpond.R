@@ -97,11 +97,11 @@ saveRDS(se, file = here("data", "transcript_summarized_experiment.rds"))
 write.table(colData(se), file = here("data", "coldata_dev.txt"))
 
 # Make sure the coldata data frame in R matches the column names of the se object 
-# to ensure teh saved txt file has the correct sample names.
+# to ensure the saved txt file has the correct sample names.
 colnames(se) == coldata[,2]
 
-#### STEP SEVEN: Import samples using tximeta into a SE object that you then summarize to gene level ####
-# Note: we drop inferential replicates for gene-level analysis
+#### STEP SEVEN: Import samples using tximeta into a SE object then summarize to gene level ####
+# Note: inferential replicates dropped for gene-level object
 se_gene <- tximeta(coldata, type = "salmon", txOut = TRUE, dropInfReps = TRUE, useHub = FALSE)
 
 # Add gene IDs for gene level matrix
@@ -127,7 +127,6 @@ saveRDS(gse, file = here("data", "gene_summarized_experiment.rds"))
 # Notes: 
   # The following code is adapted from Michael Love's Lab and the Zhu et al 2019 tutorial linked here:
     # https://bioconductor.org/packages/release/bioc/vignettes/fishpond/inst/doc/swish.html
-    # Date: 10 02 2023
 
 # Update file names/dates to match your project
 
@@ -136,7 +135,7 @@ saveRDS(gse, file = here("data", "gene_summarized_experiment.rds"))
 se_file <- here("data","transcript_summarized_experiment.rds")
 se_063025 <- readRDS(se_file)
 
-  # Isolate the transcript counts for each individual sample
+  # Isolate counts for each individual sample
 se_HCSD_WT_Shank3_SleepDevelopment_063025 <- assays(se_063025)[["counts"]]
 
   # Save  as txt file
@@ -148,7 +147,7 @@ write.table(x = se_HCSD_WT_Shank3_SleepDevelopment_063025, file = (se_txt_file),
 gse_file <- here("data","gene_summarized_experiment.rds")
 gse_063025 <- readRDS(gse_file)
 
-  # Isolate the transcript counts for each individual sample
+  # Isolate counts for each individual sample
 gse_HCSD_WT_Shank3_SleepDevelopment_063025 <- assays(gse_063025)[["counts"]]
 
   # Save as a txt file
@@ -157,6 +156,6 @@ write.table(x = gse_HCSD_WT_Shank3_SleepDevelopment_063025, file = (gse_txt_file
 
 
 
-sink('06302025_Fishpond_SessionInfo.txt')
+sink('06302025_tximeta_SessionInfo.txt')
 sessionInfo()
 sink() 
