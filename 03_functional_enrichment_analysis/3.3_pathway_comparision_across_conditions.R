@@ -1,5 +1,5 @@
 # Pathway comparison and visualization
-  # Identify terms that are functionally enriched in at least 2 ages within genotype
+  # Identify terms that are functionally enriched in at least 3 groups
 # Author: Elliot Wald (March 2026)
 
 # Project Description: Differential gene expression across ages during sleep 
@@ -86,13 +86,13 @@ terms <- combined %>%
             found_in = paste(sort(unique(source)), collapse = ", "),
             cluster = paste(sort(unique(Group)), collapse = ", "),
             .groups = "drop") %>%
-  filter(n_df >= 3)  # Keep only terms found in at least two dataframes
+  filter(n_df >= 3)  # Keep only terms found in at least 3 dataframes
 
 #### STEP 3: Prepare combined dataframe for plotting ####
 # 1. Get necessary plotting information from the original dataframes
 combined_hits <- bind_rows(WTP24, WTP30, WTSD5, S3P24, S3P30, S3SD5) %>% 
   mutate(source = recode(source, "S3SD5" = "S3P90", "WTSD5" = "WTP90")) %>% 
-  semi_join(terms, by = c("Term", "Category")) %>% # only keep terms that appear in at least three groups 
+  semi_join(terms, by = c("Term", "Category")) %>%  
   group_by(Term, Category) %>% 
   complete(source = c("WTP24", "WTP30", "WTP90", "S3P24", "S3P30", "S3P90")) %>% 
   mutate(
