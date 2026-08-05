@@ -119,10 +119,10 @@ colData(adult_gy)$condition <- droplevels(colData(adult_gy)$condition)
 colData(juv_gy)$condition <- droplevels(colData(juv_gy)$condition)
 
 # Extract a list of all expressed genes (after filtering, before normalization)
-# write.table(rownames(adult_gy), "adultGeneBackground_091625.txt", quote = F,
+# write.table(rownames(adult_gy), "adultBackground_092325.txt", quote = F,
 #             row.names = F, col.names = F)
 # 
-# write.table(rownames(juv_gy), "juvGeneBackground_091625.txt", quote = F,
+# write.table(rownames(juv_gy), "juvBackground_092325.txt", quote = F,
 #             row.names = F, col.names = F)
 
 # 5. Make a group matrices
@@ -426,7 +426,7 @@ plotPCA(g_uq_juv, labels = FALSE, pch = pchvec_juv, col = as.character(colors_ju
 
 
 #### STEP FIVE: RUV-seq ####
-# RUVseq: Here we will estimate a matrix that contains estimated factors of unwanted factors after UQ normalization
+# RUVseq: Here we will estimate a matrix that contains estimated unwanted factors after UQ normalization
 # RUVs uses technical replicates or negative controls. We will use technical replicates,
 # but track the impact of RUV normalization by looking at neg control recovery in adult WT samples.
 # Looking at neg control recovery in juveniles is optional.
@@ -447,7 +447,7 @@ suppressPackageStartupMessages(library(RUVSeq))
 # 3. Run RUVs
 # Note that k is the number of factors of unwanted variation that are being estimated from the data
 # For this data set, we chose k = 15 as that maximized the positive control/negative control recovery ratio
-# in adult WT,showed optimal separation of samples across PC1-3, and increased DEG counts
+# in adult WT, showed optimal separation of samples across PC1-3, and increased DEG counts
 k = 15
 gs_adult <- RUVs(x = g_uq_adult, cIdx = rownames(adult_gy), scIdx = adult_groups, k = k)
 gs_juv <- RUVs(x = g_uq_juv, cIdx = rownames(juv_gy), scIdx = juv_groups, k = k)
