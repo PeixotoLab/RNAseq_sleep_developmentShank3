@@ -476,13 +476,11 @@ for (i in seq_along(z)) {
 WTRS2$Pos_Controls <-NA
 z <- WTRS2$Genes
 
-# Loop through each item in z
 for (i in seq_along(z)) {
   gene_list <- unlist(strsplit(z[i], ","))
   gene_list <- noquote(gene_list)
   gene_list <- trimws(gene_list)
   
-  # Loop through for SD Pos controls
   Pos_Gene_Intersection <- intersect(gene_list, RSGenesofInterest)
   if (length(Pos_Gene_Intersection) > 0) {
     Pos_Gene_Names_Intersection <- getBM(filters = "ensembl_gene_id", attributes = c("ensembl_gene_id", "mgi_symbol"),
@@ -497,7 +495,6 @@ for (i in seq_along(z)) {
   }
   else{Pos_controls = NA}
   
-  # Assign the results to the specific cell in the WTSD5 data frame
   WTRS2$Pos_Controls[i] <- Pos_controls
 }
 
@@ -505,13 +502,11 @@ for (i in seq_along(z)) {
 all_P90_RS2$Pos_Controls <-NA
 z <- all_P90_RS2$Genes
 
-# Loop through each item in z
 for (i in seq_along(z)) {
   gene_list <- unlist(strsplit(z[i], ","))
   gene_list <- noquote(gene_list)
   gene_list <- trimws(gene_list)
   
-  # Loop through for SD Pos controls
   Pos_Gene_Intersection <- intersect(gene_list, RSGenesofInterest)
   if (length(Pos_Gene_Intersection) > 0) {
     Pos_Gene_Names_Intersection <- getBM(filters = "ensembl_gene_id", attributes = c("ensembl_gene_id", "mgi_symbol"),
@@ -526,20 +521,18 @@ for (i in seq_along(z)) {
   }
   else{Pos_controls = NA}
   
-  # Assign the results to the specific cell in the WTSD5 data frame
   all_P90_RS2$Pos_Controls[i] <- Pos_controls
 }
 
 # all P90 SD5
 all_P90_SD5$Pos_Controls <-NA
 z <- all_P90_SD5$Genes
-# Loop through each item in z
+
 for (i in seq_along(z)) {
   gene_list <- unlist(strsplit(z[i], ","))
   gene_list <- noquote(gene_list)
   gene_list <- trimws(gene_list)
   
-  # Loop through for SD Pos controls
   Pos_Gene_Intersection <- intersect(gene_list, SDGenesofInterest)
   if (length(Pos_Gene_Intersection) > 0) {
     Pos_Gene_Names_Intersection <- getBM(filters = "ensembl_gene_id", attributes = c("ensembl_gene_id", "mgi_symbol"),
@@ -554,7 +547,6 @@ for (i in seq_along(z)) {
   }
   else{Pos_controls = NA}
   
-  # Assign the results to the specific cell in the WTSD5 data frame
   all_P90_SD5$Pos_Controls[i] <- Pos_controls
 }
 
@@ -562,13 +554,11 @@ for (i in seq_along(z)) {
 all_P90_groups$Pos_Controls <-NA
 z <- all_P90_groups$Genes
 
-# Loop through each item in z
 for (i in seq_along(z)) {
   gene_list <- unlist(strsplit(z[i], ","))
   gene_list <- noquote(gene_list)
   gene_list <- trimws(gene_list)
   
-  # Loop through for SD Pos controls
   Pos_Gene_Intersection <- intersect(gene_list, c(SDGenesofInterest, RSGenesofInterest))
   if (length(Pos_Gene_Intersection) > 0) {
     Pos_Gene_Names_Intersection <- getBM(filters = "ensembl_gene_id", attributes = c("ensembl_gene_id", "mgi_symbol"),
@@ -583,7 +573,6 @@ for (i in seq_along(z)) {
   }
   else{Pos_controls = NA}
   
-  # Assign the results to the specific cell in the WTSD5 data frame
   all_P90_groups$Pos_Controls[i] <- Pos_controls
 }
 
