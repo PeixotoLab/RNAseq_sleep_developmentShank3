@@ -19,6 +19,8 @@ Christine Muheim (christine.muheim@wsu.edu)
 
 Stephanie Hicks (shicks19@jhu.edu)
 
+Michael Rempe (michael.rempe@wsu.edu)
+
 ## Data
 ### RNA-seq
 All sequencing data have been deposited in the Gene Expression Omnibus Database (GEO) under accession numbers GSE30661 (S3, SD, SD+RS, HC, all ages; WT, SD+RS and HC, adult), GSE211301 (WT, SD and HC, P24, P30) and GSE113754 (WT, SD and HC, adult). 
@@ -49,10 +51,10 @@ done
  
 Once files were downloaded, they were gzipped for use in the Salmon quantification pipeline. 
 
-### EEG data
+### EEG 
 Raw EEG data is available at https://sleepdata.org/datasets/medina-2022 (Medina et al., 2022) and can be downloaded using NSRR gem as described here: https://github.com/nsrr/nsrr-gem/blob/master/README.md#prerequisites 
 
-## Analysis
+## RNA-seq Analysis
 ### Transcript Quantification
 Raw sequencing reads were quantified using Salmon v1.10.0. The most recent Salmon release (July 2026) is v2.4.1. Salmon 2.0 was re-written in Rust as described here: https://github.com/COMBINE-lab/salmon.
 The last C++ release (v1.12.0) is described here: https://salmon.readthedocs.io/en/latest/index.html. 
@@ -108,4 +110,7 @@ Hub genes were defined by identifying genes that appeared in all or almost all o
 The annotated DAVID output is available at `03_functional_enrichment_analysis/annotatedDAVID_output_uniqueIntersections_0201.xlsx` and serves as input for the `03_functional_enrichment_analysis/3.3_pathway_comparison_across_conditions.R` script. 
 This script contains code for visualizing terms that are functionally enriched in at least three experimental groups, an analysis that allowed for the identification of functions that were common across ages and genotypes which may mediate sleep homeostasis deficits in the S3 animals.
 
-### Spectral Analysis
+## Spectral Analysis
+`04_EEG_analysis` contains code for time in state analysis of P24/P30 EEG which is modified from https://github.com/PeixotoLab/MeCP2Z (Maghribi et al., 2025). It takes .mat files as input and produces figures, statistics and tables for time in state, spectral power, bout analysis, etc. 
+
+The requirements for running this code are Matlab, the control system toolbox, the statistics/machine learning toolbox and the bioinformatics toolbox. The starting point for each recording is a .mat file created with `ConvertSleepSignCSVtoMatlabMAT.m`. 
