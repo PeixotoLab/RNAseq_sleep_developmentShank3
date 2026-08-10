@@ -20,7 +20,7 @@ Christine Muheim (christine.muheim@wsu.edu)
 Stephanie Hicks (shicks19@jhu.edu)
 
 ## Data
-### Bulk RNA-seq
+### RNA-seq
 All sequencing data have been deposited in the Gene Expression Omnibus Database (GEO) under accession numbers GSE30661 (S3, SD, SD+RS, HC, all ages; WT, SD+RS and HC, adult), GSE211301 (WT, SD and HC, P24, P30) and GSE113754 (WT, SD and HC, adult). 
 
 We already had gzipped FASTQ files for S3 samples and adult WT samples. WT P24/P30 FASTQ files were downloaded from SRA using the SRA toolkit described here: https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
