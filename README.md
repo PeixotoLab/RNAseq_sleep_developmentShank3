@@ -111,6 +111,6 @@ The annotated DAVID output is available at `03_functional_enrichment_analysis/an
 This script contains code for visualizing terms that are functionally enriched in at least three experimental groups, an analysis that allowed for the identification of functions that were common across ages and genotypes which may mediate sleep homeostasis deficits in the S3 animals.
 
 ## Spectral Analysis
-`04_EEG_analysis` contains code for time in state analysis of P24/P30 EEG which is modified from https://github.com/PeixotoLab/MeCP2Z (Maghribi et al., 2025). It takes .mat files as input and produces figures, statistics and tables for time in state, spectral power, bout analysis, etc. 
+`04_EEG_analysis` contains code for time in state analysis of P24/P30 EEG which is modified from https://github.com/PeixotoLab/MeCP2Z (Maghribi et al., 2025). It takes .mat files as input and produces figures, statistics and tables for time in state, spectral power, bout analysis, etc. The code is written to run all analyses at once rather than specific tests. Only the  time in state analysis was reported in this paper.
 
 The requirements for running this code are Matlab, the control system toolbox, the statistics/machine learning toolbox and the bioinformatics toolbox. The starting point for each recording is a .mat file created with `ConvertSleepSignCSVtoMatlabMAT.m`. 
