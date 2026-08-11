@@ -2,8 +2,7 @@
   # Fishpond Differential Gene Expression Pipeline
 # Author: Elliot Wald (January, February 2025)
 
-# Adapted from 01.2_Differential_Gene_Expression_Using_Fishpond.R and Alexander Popescu's script
-  # https://github.com/PeixotoLab/RNAseq_sleep
+# Adapted from 01.2_Differential_Gene_Expression_Using_Fishpond.R (https://github.com/PeixotoLab/RNAseq_sleep)
 # Adapted from Michael Love's Lab and the Zhu et al 2019 tutorial linked here:
 # https://bioconductor.org/packages/release/bioc/vignettes/fishpond/inst/doc/swish.html#Differential_transcript_usage
 
