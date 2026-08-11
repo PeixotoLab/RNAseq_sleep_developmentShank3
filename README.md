@@ -11,8 +11,6 @@ Elizabeth Medina (325medinaelizabeth@gmail.com)
 
 Catilin Ottaway (caitlin.ottaway@wsu.edu)
 
-Alex Popescu (alex.popescu@yale.edu)
-
 Katie Ford (kaitlyn.ford@wsu.edu)
 
 Christine Muheim (christine.muheim@wsu.edu)
