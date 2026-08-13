@@ -1,6 +1,6 @@
 # Unmerged Bubble Plots
-# Adapted from BubblePlots_082824, BubblePLots_010725_LM, and CO_AP_SDRS_BubblePlot
-# Author: Elliot Wald (March 2025)
+# Adapted from code for the scRNA-seq pipeline (https://github.com/PeixotoLab/RNAseq_sleep), SDRS transcriptional dynamics (https://github.com/PeixotoLab/SDRS_Transcriptional_Dynamics)
+# Edits by: Elliot Wald (March 2025)
 # For Min Cluster Size 3
 
 # Project Description: Differential gene expression across ages during sleep 
