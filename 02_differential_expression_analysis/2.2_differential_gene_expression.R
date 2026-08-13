@@ -1,10 +1,10 @@
 # RUV Analysis 
   # Fishpond Differential Gene Expression Pipeline
-# Author: Elliot Wald (January, February 2025)
 
 # Adapted from 01.2_Differential_Gene_Expression_Using_Fishpond.R (https://github.com/PeixotoLab/RNAseq_sleep)
 # Adapted from Michael Love's Lab and the Zhu et al 2019 tutorial linked here:
 # https://bioconductor.org/packages/release/bioc/vignettes/fishpond/inst/doc/swish.html#Differential_transcript_usage
+# Edits by Elliot Wald (January, February 2025)
 
 # Project Description: Differential gene expression across ages during sleep 
 # deprivation and recovery sleep; analyzed in two groups: P24/P30 SD and P90 SD/RS
