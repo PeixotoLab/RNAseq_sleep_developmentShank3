@@ -7,7 +7,7 @@
 # P24/P30/P90, male, WT and Shank3∆C mice
 # n = 5 per group
 
-setwd("/Users/elliotwald/Documents/mouse_dev_S3_WT_bulk/functional_annotation/functional_annotation_P24-30Venns_P90Upsets")
+setwd("/Users/elliotwald/Documents/mouse_dev_S3_WT_bulk/functional_annotation/functional_annotation_P24-30-90UpSets")
 
 # Libraries
 library(ggplot2)
